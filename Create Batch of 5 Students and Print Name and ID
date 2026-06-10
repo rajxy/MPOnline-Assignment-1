@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        List<Student> students = new List<Student>()
+        {
+            new Student{Id=101, Name="Rahul"},
+            new Student{Id=102, Name="Priya"},
+            new Student{Id=103, Name="Aman"},
+            new Student{Id=104, Name="Neha"},
+            new Student{Id=105, Name="Karan"}
+        };
+
+        Console.WriteLine("Student Details");
+
+        foreach (Student s in students)
+        {
+            Console.WriteLine($"ID: {s.Id}, Name: {s.Name}");
+        }
+    }
+}
